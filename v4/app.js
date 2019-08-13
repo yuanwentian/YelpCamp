@@ -8,11 +8,11 @@ var express 	 = require("express"),
 	User     	 = require("./models/user")
 	seedDB 		 = require("./seeds");
 
-seedDB();
+
 mongoose.connect("mongodb://127.0.0.1/yelpcamp_v4", {useNewUrlParser: true});
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
-
+seedDB();
 
 // Campground.create(
 // 	{
